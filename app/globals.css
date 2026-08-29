@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --color-judice-dark: #1e1e1e;
+  --color-judice-navy: #010d29;
+  --color-judice-blue: #314975;
+  --color-judice-blue-light: #7da6e0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-judice-dark: var(--color-judice-dark);
+  --color-judice-navy: var(--color-judice-navy);
+  --color-judice-blue: var(--color-judice-blue);
+  --color-judice-blue-light: var(--color-judice-blue-light);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Alto contraste: deixa todo texto em negrito, sem alterar cores. */
+.high-contrast :where(*) {
+  font-weight: bold !important;
+}
+
+/* Escala de cinza: converte imagens e cores do site para tons de cinza,
+   para acessibilidade. Aplicado em cada filho direto do body (em vez do
+   body/html) para que o botão flutuante do WhatsApp possa ficar de fora e
+   continuar identificável — um filtro no ancestral não pode ser revertido
+   por um filho. */
+html.grayscale-mode > body > *:not(.whatsapp-button) {
+  filter: grayscale(1);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
