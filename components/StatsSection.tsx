@@ -1,12 +1,12 @@
 import SectionHeading from "./SectionHeading";
 
 const DEFAULT_STATS = [
-  { value: "+45mil", label: "Usuários cadastrados" },
-  { value: "+4.6mi", label: "Diligências atendidas" },
-  { value: "+112mil", label: "Audiências realizadas" },
-  { value: "+15mil", label: "Empresas que já utilizaram as soluções da Judice" },
-  { value: "+23", label: "Anos de experiência no mercado" },
-  { value: "+1000", label: "Parceiros envolvidos nos processos" },
+  { value: "+23", label: "anos de atuação" },
+  { value: "+4,6mi", label: "diligências atendidas" },
+  { value: "+112mil", label: "audiências realizadas" },
+  { value: "+15mil", label: "empresas atendidas" },
+  { value: "+45mil", label: "usuários cadastrados" },
+  { value: "+1000", label: "profissionais na rede" },
 ];
 
 type Stat = { value: string; label: string };
@@ -20,12 +20,8 @@ type StatsSectionProps = {
 
 export default function StatsSection({
   eyebrow = "Nossa trajetória em números",
-  title = (
-    <>
-      <span className="text-judice-blue">Judice</span> em números
-    </>
-  ),
-  description = "Números que refletem a nossa entrega diária de agilidade, segurança e suporte especializado em todo o Brasil.",
+  title = "Experiência que se transforma em segurança",
+  description,
   stats = DEFAULT_STATS,
 }: StatsSectionProps) {
   return (
@@ -48,6 +44,10 @@ export default function StatsSection({
             </div>
           ))}
         </div>
+        <p className="mx-auto max-w-2xl text-center text-base leading-relaxed text-zinc-600">
+          Números importantes. Mas, para nós, cada número representa uma
+          demanda que precisava ser executada corretamente.
+        </p>
       </div>
     </section>
   );

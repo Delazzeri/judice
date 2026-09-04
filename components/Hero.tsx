@@ -18,11 +18,11 @@ export default function Hero() {
       <div className="relative mx-auto w-full max-w-7xl space-y-8 px-4 py-24 sm:px-8 sm:py-32">
         <div className="max-w-2xl space-y-6">
           <h1 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
-            Gerencie suas demandas na Judice
+            Sua operação jurídica em todo o Brasil.
           </h1>
           <p className="max-w-xl text-base leading-relaxed text-white/70">
-            A Judice oferece correspondência jurídica, com foco
-            em representação em audiências, presenciais e virtuais em todo o Brasil.
+            Há mais de 23 anos, a Judice ajuda escritórios e departamentos jurídicos a
+            executar audiências, diligências e serviços locais com segurança, agilidade e controle.
           </p>
         </div>
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -30,13 +30,13 @@ export default function Hero() {
             href="/entrar"
             className="rounded-md bg-white px-6 py-3 text-center text-sm font-semibold text-zinc-900 transition-colors hover:bg-zinc-200"
           >
-            Entrar
+            Solicite uma diligência
           </a>
           <a
-            href="/entrar"
+            href="#solucoes"
             className="rounded-md border border-white/30 px-6 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-white/10"
           >
-            Cadastre-se Grátis
+            Conheça nossas soluções
           </a>
         </div>
       </div>

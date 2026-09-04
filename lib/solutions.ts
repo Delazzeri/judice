@@ -15,7 +15,7 @@ export const SOLUTIONS: Solution[] = [
     slug: "audiencias",
     title: "Audiências",
     description:
-      "Representação em audiências presenciais e virtuais em todo o Brasil, com acompanhamento detalhado e envio de relatório após cada sessão.",
+      "Advogados e prepostos para audiências presenciais e virtuais em todo o Brasil, com acompanhamento da Judice em todas as etapas e relatório após a realização.",
     image: "/images/solutions/audiencias.jpg",
     intro:
       "Pelo nosso sistema, você solicita advogados correspondentes ou prepostos para comparecerem a audiências nas mais diversas modalidades, em qualquer comarca do Brasil. Cada etapa, confirmação de disponibilidade, recebimento de arquivos, conclusão da audiência, fica registrada no sistema, para você acompanhar o andamento em tempo real.",
@@ -85,7 +85,7 @@ export const SOLUTIONS: Solution[] = [
     slug: "copias-de-processos",
     title: "Cópias de Processos",
     description:
-      "É um serviço através do qual o cliente acessa nosso sistema e solicita cópias de processos. Atuamos em todo o Brasil.",
+      "Solicite cópias de processos e documentos em qualquer comarca. Nossa equipe coordena a diligência, realiza a digitalização e disponibiliza o material para acesso pela plataforma.",
     image: "/images/solutions/copias_de_processos_pela_internet.jpg",
     intro:
       "Solicite cópias de processos informando o número da peça, as páginas desejadas e outros dados básicos. Nossa equipe vai até o Fórum, digitaliza os documentos e disponibiliza os arquivos para você acessar pela internet.",
@@ -151,7 +151,7 @@ export const SOLUTIONS: Solution[] = [
     slug: "digitalizacoes-internas",
     title: "Digitalizações Internas",
     description:
-      "Digitalização de documentos e peças processuais do seu escritório, organizadas e disponibilizadas dentro do nosso sistema.",
+      "Digitalização, organização e disponibilização de documentos e processos, com padronização e controle.",
     image: "/images/solutions/digitalizacoes_internas.jpg",
     intro:
       "Além das cópias obtidas em Fóruns e Tribunais, digitalizamos documentos e peças processuais que já estão no seu escritório, organizando tudo dentro do mesmo sistema que você já usa para acompanhar audiências e cópias.",
@@ -212,7 +212,7 @@ export const SOLUTIONS: Solution[] = [
     slug: "processo-eletronico",
     title: "Processo Eletrônico",
     description:
-      "Acompanhamento e movimentação de processos eletrônicos, com atualização contínua de andamentos e prazos.",
+      "A Judice executa tarefas e diligências relacionadas a processos eletrônicos, ajudando sua equipe a ganhar tempo e reduzir atividades operacionais.",
     image: "/images/solutions/processo_eletronico.jpg",
     intro:
       "Pelo mesmo sistema online usado para audiências e cópias, você protocola e acompanha processos eletrônicos com simplicidade. A Judice cuida do ajuste dos arquivos para atender aos requisitos dos diferentes sistemas eletrônicos vigentes no Brasil.",
@@ -273,7 +273,7 @@ export const SOLUTIONS: Solution[] = [
     slug: "retiradas-e-distribuicao",
     title: "Retiradas e Distribuição",
     description:
-      "Retirada de documentos e distribuição de petições e processos junto aos fóruns e tribunais.",
+      "Retirada de documentos, mandados, alvarás, certidões, cartas, guias e demais peças, além de distribuição de petições e processos.",
     image: "/images/solutions/retiradas_protocolos_distribuicao.jpg",
     intro:
       "Realizamos retiradas de documentos judiciais em todo o Brasil, alvarás, mandados, certidões, editais, guias, ofícios, cartas precatórias e rogatórias, além da distribuição de iniciais e desentranhamentos, sem que você precise sair do escritório.",
@@ -334,7 +334,7 @@ export const SOLUTIONS: Solution[] = [
     slug: "visitas-in-loco",
     title: "Visitas in Loco",
     description:
-      "Correspondentes presenciais para vistorias, diligências e visitas técnicas onde for necessário.",
+      "Vistorias, verificações, levantamento de informações e outras diligências presenciais realizadas conforme as necessidades do seu escritório.",
     image: "/images/solutions/visita_in_loco.jpg",
     intro:
       "Há situações em que a comunicação escrita não é suficiente, é preciso uma conversa pessoal, uma reunião presencial. Um de nossos correspondentes pode, por exemplo, agendar e realizar uma reunião com um juiz ou outra autoridade para esclarecer pontos específicos do seu interesse.",
@@ -395,7 +395,7 @@ export const SOLUTIONS: Solution[] = [
     slug: "pericias",
     title: "Perícias",
     description:
-      "Acompanhamento de perícias judiciais e extrajudiciais, com registro detalhado para subsidiar o processo.",
+      "Perícias judiciais, extrajudiciais e assistência técnica nas áreas em que a Judice possui atuação especializada.",
     image: "/images/solutions/pericia.jpg",
     intro:
       "Oferecemos perícia judicial, extrajudicial e assistência técnica nas esferas trabalhista e civil, para esclarecer litígios em processos que envolvam pessoas ou patrimônio, com registro detalhado que subsidia cada etapa do processo.",
@@ -452,7 +452,7 @@ export const SOLUTIONS: Solution[] = [
     slug: "diligencias-extrajudiciais",
     title: "Diligências Extrajudiciais",
     description:
-      "Execução de diligências fora do âmbito judicial, como notificações, constatações e levantamento de informações.",
+      "Notificações, constatações, levantamentos de informações e outras diligências extrajudiciais realizadas em todo o Brasil.",
     image: "/images/solutions/diligencias_extrajudiciais.jpg",
     intro:
       "Nem toda diligência depende de um processo judicial em andamento. Executamos diligências extrajudiciais como notificações, constatações e levantamento de informações, com o mesmo padrão de agilidade e confiabilidade das nossas demais soluções.",
