@@ -122,6 +122,37 @@ export default function Home() {
           sem precisar estar em todo o Brasil.
         </Statement>
 
+        <IntroStatement
+          title="Tecnologia para você ter controle, não para complicar sua rotina."
+          description={
+            <>
+              Nossa plataforma organiza as solicitações, documentos,
+              instruções e resultados das diligências em um único ambiente.
+              Você solicita. A Judice coordena. Você acompanha. E recebe o
+              resultado.
+            </>
+          }
+        />
+
+        <FeatureGrid
+          eyebrow="Grandes operações"
+          title="Uma solução para quem tem escala."
+          items={[
+            {
+              title: "Menos fornecedores",
+              body: "Um único parceiro coordena as demandas locais em todo o Brasil.",
+            },
+            {
+              title: "Menos controles",
+              body: "Sua equipe não precisa administrar dezenas ou centenas de profissionais espalhados pelo país.",
+            },
+            {
+              title: "Mais previsibilidade",
+              body: "Uma operação nacional sob um único comando, com gestão centralizada.",
+            },
+          ]}
+        />
+
         <PartnerLogos />
         <Testimonials />
         <ArticlesHighlight />
@@ -130,7 +161,7 @@ export default function Home() {
           title="Tem uma operação jurídica nacional?"
           description="Conte para nós o que sua equipe precisa executar. Nossa equipe pode desenhar uma solução adequada ao seu volume, perfil e distribuição geográfica."
           primaryLabel="Falar com a Judice →"
-          primaryHref="https://www.judiceonline.com.br/judice/judiceSite/login.jsp"
+          primaryHref="https://wa.me/5551983458538"
           secondaryLabel="Já sabe o que precisa? Acesse a plataforma"
           secondaryHref="https://www.judiceonline.com.br/judice/judiceSite/login.jsp"
         />
