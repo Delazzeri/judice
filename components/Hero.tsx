@@ -27,7 +27,7 @@ export default function Hero() {
         </div>
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
           <a
-            href="/entrar"
+            href="https://www.judiceonline.com.br/judice/judiceSite/login.jsp"
             className="rounded-md bg-white px-6 py-3 text-center text-sm font-semibold text-zinc-900 transition-colors hover:bg-zinc-200"
           >
             Solicite uma diligência

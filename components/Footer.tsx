@@ -7,7 +7,10 @@ const FOOTER_COLUMNS = [
       { label: "Home", href: "/#hero" },
       { label: "Sobre nós", href: "/sobre" },
       { label: "Soluções", href: "/#solucoes" },
-      { label: "Correspondente", href: "/seja-correspondente" },
+      {
+        label: "Correspondente",
+        href: "https://www.judiceonline.com.br/judice/judiceSite/correspondente.jsp",
+      },
     ],
   },
   {

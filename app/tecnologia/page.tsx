@@ -49,9 +49,9 @@ export default function Tecnologia() {
           title="Tem uma operação jurídica nacional?"
           description="Conte para nós o que sua equipe precisa executar. Nossa equipe pode desenhar uma solução adequada ao seu volume, perfil e distribuição geográfica."
           primaryLabel="Falar com a Judice →"
-          primaryHref="/entrar"
+          primaryHref="https://www.judiceonline.com.br/judice/judiceSite/login.jsp"
           secondaryLabel="Já sabe o que precisa? Acesse a plataforma"
-          secondaryHref="/entrar"
+          secondaryHref="https://www.judiceonline.com.br/judice/judiceSite/login.jsp"
         />
       </main>
       <Footer />

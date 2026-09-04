@@ -8,10 +8,10 @@ import { useAccessibility } from "./AccessibilityProvider";
 
 const NAV_LINKS_BEFORE = [{ label: "Home", href: "/" }, { label: "Sobre Nós", href: "/sobre" }];
 const NAV_LINKS_AFTER = [
-  { label: "Seja Correspondente", href: "/seja-correspondente" },
+  { label: "Seja Correspondente", href: "https://www.judiceonline.com.br/judice/judiceSite/correspondente.jsp" },
 ];
 
-const LOGIN_URL = "/entrar";
+const LOGIN_URL = "https://www.judiceonline.com.br/judice/judiceSite/login.jsp";
 const CONTACT_EMAIL = "judice@judice.com.br";
 const CONTACT_WHATSAPP_DISPLAY = "51 98345-8538";
 const CONTACT_WHATSAPP_HREF = "https://wa.me/5551983458538";
@@ -262,7 +262,7 @@ export default function Header() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <a
-            href="/entrar"
+            href={LOGIN_URL}
             className="rounded-md bg-judice-navy px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-judice-navy/90"
           >
             Cadastre-se
@@ -372,7 +372,7 @@ export default function Header() {
 
           <div className="mt-2 flex flex-col gap-2 border-t border-zinc-100 pt-4">
             <a
-              href="/entrar"
+              href={LOGIN_URL}
               className="rounded-md bg-judice-navy px-4 py-2 text-center text-sm font-semibold text-white"
             >
               Cadastre-se
