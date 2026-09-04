@@ -25,7 +25,7 @@ export default function SolutionsShowcase({
   items,
 }: SolutionsShowcaseProps) {
   return (
-    <section id="solucoes" className="mx-auto max-w-7xl px-4 py-16 sm:px-8 sm:py-24">
+    <section id="solucoes" className="mx-auto max-w-7xl scroll-mt-24 px-4 py-16 sm:px-8 sm:py-24">
       <div className="grid grid-cols-1 items-start gap-12 md:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)] md:gap-20">
         <div className="space-y-8">
           <div className="space-y-5">
