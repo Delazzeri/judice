@@ -170,7 +170,7 @@ export const SOLUTIONS: Solution[] = [
       },
       {
         title: "Segurança",
-        body: "Arquivos armazenados nos mesmos servidores próprios, com backup diário e duplicidade de armazenamento.",
+        body: "Arquivos armazenados em nuvem, garantindo segurança, duplicidade de armazenamento e alta disponibilidade dos dados.",
       },
     ],
     steps: [
@@ -288,7 +288,7 @@ export const SOLUTIONS: Solution[] = [
       },
       {
         title: "Segurança",
-        body: "Documentos armazenados em servidores próprios, com backup diário e duplicidade de armazenamento.",
+        body: "Documentos armazenados em nuvem, garantindo segurança, duplicidade de armazenamento e alta disponibilidade dos dados.",
       },
       {
         title: "Economia",
