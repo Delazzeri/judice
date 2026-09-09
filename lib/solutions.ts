@@ -34,7 +34,7 @@ export const SOLUTIONS: Solution[] = [
       },
       {
         title: "Segurança",
-        body: "Documentos armazenados em servidores próprios, com backup diário e duplicidade de armazenamento, sem dependência de nuvem de terceiros.",
+        body: "Documentos armazenados em nuvem, garantindo segurança, duplicidade de armazenamento e alta disponibilidade dos dados.",
       },
     ],
     steps: [
