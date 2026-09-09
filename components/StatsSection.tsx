@@ -1,15 +1,22 @@
 import SectionHeading from "./SectionHeading";
+import CountUp from "./CountUp";
 
-const DEFAULT_STATS = [
-  { value: "+23", label: "anos de atuação" },
-  { value: "+4,6mi", label: "diligências atendidas" },
-  { value: "+112mil", label: "audiências realizadas" },
-  { value: "+15mil", label: "empresas atendidas" },
-  { value: "+45mil", label: "usuários cadastrados" },
-  { value: "+1000", label: "profissionais na rede" },
+const DEFAULT_STATS: Stat[] = [
+  { target: 23, prefix: "+", label: "anos de atuação" },
+  { target: 4.6, prefix: "+", suffix: "mi", decimals: 1, label: "diligências atendidas" },
+  { target: 112, prefix: "+", suffix: "mil", label: "audiências realizadas" },
+  { target: 15, prefix: "+", suffix: "mil", label: "empresas atendidas" },
+  { target: 45, prefix: "+", suffix: "mil", label: "usuários cadastrados" },
+  { target: 1000, prefix: "+", label: "profissionais na rede" },
 ];
 
-type Stat = { value: string; label: string };
+type Stat = {
+  target: number;
+  prefix?: string;
+  suffix?: string;
+  decimals?: number;
+  label: string;
+};
 
 type StatsSectionProps = {
   eyebrow?: string;
@@ -35,9 +42,12 @@ export default function StatsSection({
               className={`flex flex-col items-center gap-2 border-zinc-200 px-6 py-8 text-center border-b sm:border-b-0 last:border-b-0 ${index % 3 !== 2 ? "sm:border-r" : ""
                 } ${index < 3 ? "sm:border-t-0" : "sm:border-t"}`}
             >
-              <p className="text-4xl font-bold text-zinc-900 sm:text-5xl">
-                {stat.value}
-              </p>
+              <CountUp
+                target={stat.target}
+                prefix={stat.prefix}
+                suffix={stat.suffix}
+                decimals={stat.decimals}
+              />
               <p className="max-w-[16rem] text-sm text-zinc-500">
                 {stat.label}
               </p>
