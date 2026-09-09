@@ -15,6 +15,7 @@ const MEMBERS: Member[] = [
     role: "Fundador da Judice",
     bio: "Formado em Ciências Contábeis, iniciou sua trajetória no Judiciário gaúcho, onde conheceu de perto os desafios do universo jurídico. Em 2003, fundou a Judice para transformar a forma como escritórios realizam diligências fora de suas localidades, hoje uma empresa com atuação em todo o Brasil.",
     image: "/images/team/rodrigo.png",
+    email: "rodrigo@judice.com.br",
   },
   {
     name: "Fábio Joel",
