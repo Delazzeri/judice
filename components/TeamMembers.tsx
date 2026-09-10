@@ -84,25 +84,25 @@ export default function TeamMembers() {
                   <p className="text-sm leading-relaxed text-white/70">
                     {member.bio}
                   </p>
-                  <div className="flex items-center gap-2 pt-1">
+                  <div className="flex flex-col gap-2 pt-2 sm:flex-row sm:flex-wrap">
                     {member.linkedin && (
                       <a
                         href={member.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label={`LinkedIn de ${member.name}`}
-                        className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white hover:text-judice-navy"
+                        className="flex items-center justify-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-white hover:text-judice-navy"
                       >
-                        <LinkedinIcon className="h-4.5 w-4.5" />
+                        <LinkedinIcon className="h-4 w-4" />
+                        Ver no LinkedIn
                       </a>
                     )}
                     {member.email && (
                       <a
                         href={`mailto:${member.email}`}
-                        aria-label={`Enviar e-mail para ${member.name}`}
-                        className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white hover:text-judice-navy"
+                        className="flex items-center justify-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-white hover:text-judice-navy"
                       >
-                        <EmailIcon className="h-4.5 w-4.5" />
+                        <EmailIcon className="h-4 w-4" />
+                        Enviar e-mail
                       </a>
                     )}
                   </div>
