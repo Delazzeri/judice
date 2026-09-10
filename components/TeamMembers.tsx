@@ -7,6 +7,7 @@ type Member = {
   bio: string;
   image: string;
   email?: string;
+  linkedin?: string;
 };
 
 const MEMBERS: Member[] = [
@@ -34,21 +35,26 @@ function EmailIcon({ className = "" }: { className?: string }) {
   );
 }
 
+function LinkedinIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="currentColor">
+      <path d="M6.94 8.5H3.56V20h3.38V8.5zM5.25 3.5a1.96 1.96 0 100 3.92 1.96 1.96 0 000-3.92zM20.5 20h-3.37v-5.9c0-1.41-.03-3.22-1.96-3.22-1.97 0-2.27 1.54-2.27 3.12V20H9.53V8.5h3.24v1.57h.05c.45-.86 1.56-1.76 3.21-1.76 3.43 0 4.47 2.26 4.47 5.2V20z" />
+    </svg>
+  );
+}
+
 export default function TeamMembers() {
   return (
     <section className="mx-auto max-w-7xl space-y-12 px-4 py-12 sm:px-8 sm:py-16">
       <SectionHeading
-        eyebrow="Quem está por trás"
-        title="As pessoas que constroem a Judice"
-        description="Mais de duas décadas de experiência à frente da operação, unindo conhecimento do Judiciário, tecnologia e gestão de pessoas."
+        eyebrow="Time Judice"
+        title="Quem está à frente"
+        description="Especialistas que conectam conhecimento do Judiciário, tecnologia e gestão de pessoas para sustentar a evolução da Judice."
       />
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-12">
         {MEMBERS.map((member) => (
-          <div
-            key={member.name}
-            className="flex flex-col gap-4 rounded-2xl border border-zinc-200 p-6 sm:flex-row sm:gap-6"
-          >
-            <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-full bg-zinc-100">
+          <div key={member.name} className="space-y-5">
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-zinc-100">
               <Image
                 src={member.image}
                 alt={member.name}
@@ -56,27 +62,38 @@ export default function TeamMembers() {
                 className="object-cover"
               />
             </div>
-            <div className="space-y-2">
-              <div className="flex items-start justify-between gap-2">
-                <div>
-                  <p className="text-base font-semibold text-zinc-900">
-                    {member.name}
-                  </p>
-                  <p className="text-sm text-judice-blue">{member.role}</p>
-                </div>
+            <div className="space-y-3">
+              <div>
+                <p className="text-sm text-judice-blue">{member.role}</p>
+                <p className="text-xl font-bold tracking-tight text-zinc-900">
+                  {member.name}
+                </p>
+              </div>
+              <p className="text-sm leading-relaxed text-zinc-600">
+                {member.bio}
+              </p>
+              <div className="flex items-center gap-2 pt-1">
+                {member.linkedin && (
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`LinkedIn de ${member.name}`}
+                    className="flex h-9 w-9 items-center justify-center rounded-full bg-judice-navy/5 text-judice-navy transition-colors hover:bg-judice-navy hover:text-white"
+                  >
+                    <LinkedinIcon className="h-4.5 w-4.5" />
+                  </a>
+                )}
                 {member.email && (
                   <a
                     href={`mailto:${member.email}`}
                     aria-label={`Enviar e-mail para ${member.name}`}
-                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-zinc-400 transition-colors hover:bg-zinc-100 hover:text-judice-navy"
+                    className="flex h-9 w-9 items-center justify-center rounded-full bg-judice-navy/5 text-judice-navy transition-colors hover:bg-judice-navy hover:text-white"
                   >
                     <EmailIcon className="h-4.5 w-4.5" />
                   </a>
                 )}
               </div>
-              <p className="text-sm leading-relaxed text-zinc-600">
-                {member.bio}
-              </p>
             </div>
           </div>
         ))}

@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import PageHero from "@/components/PageHero";
 import SectionHeading from "@/components/SectionHeading";
 import NumberedTimeline from "@/components/NumberedTimeline";
+import TeamMembers from "@/components/TeamMembers";
 import StatBanner from "@/components/StatBanner";
 import ServiceList from "@/components/ServiceList";
 import BrazilMap from "@/components/BrazilMap";
@@ -51,6 +52,8 @@ export default function Sobre() {
             </p>
           </div>
         </section>
+
+        <TeamMembers />
 
         <NumberedTimeline
           eyebrow="Nossos serviços"

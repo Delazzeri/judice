@@ -4,7 +4,6 @@ import IntroStatement from "@/components/IntroStatement";
 import SolutionsShowcase from "@/components/SolutionsShowcase";
 import NumberedTimeline from "@/components/NumberedTimeline";
 import TeamBanner from "@/components/TeamBanner";
-import TeamMembers from "@/components/TeamMembers";
 import StatsSection from "@/components/StatsSection";
 import FeatureGrid from "@/components/FeatureGrid";
 import Statement from "@/components/Statement";
@@ -82,8 +81,6 @@ export default function Home() {
         />
 
         <TeamBanner />
-
-        <TeamMembers />
 
         <StatsSection />
 
