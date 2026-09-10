@@ -45,58 +45,80 @@ function LinkedinIcon({ className = "" }: { className?: string }) {
 
 export default function TeamMembers() {
   return (
-    <section className="mx-auto max-w-7xl space-y-12 px-4 py-12 sm:px-8 sm:py-16">
-      <SectionHeading
-        eyebrow="Time Judice"
-        title="Quem está à frente"
-        description="Especialistas que conectam conhecimento do Judiciário, tecnologia e gestão de pessoas para sustentar a evolução da Judice."
+    <section className="relative overflow-hidden bg-judice-navy py-16 sm:py-24">
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.08),_transparent_60%)]"
       />
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-12">
-        {MEMBERS.map((member) => (
-          <div key={member.name} className="space-y-5">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-zinc-100">
-              <Image
-                src={member.image}
-                alt={member.name}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="space-y-3">
-              <div>
-                <p className="text-sm text-judice-blue">{member.role}</p>
-                <p className="text-xl font-bold tracking-tight text-zinc-900">
-                  {member.name}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-24 -left-32 hidden h-[520px] w-[520px] opacity-[0.04] md:block"
+      >
+        <Image
+          src="/images/logos/logo_simbolo_nova.png"
+          alt=""
+          fill
+          className="object-contain"
+        />
+      </div>
+
+      <div className="relative mx-auto max-w-7xl space-y-12 px-4 sm:px-8">
+        <SectionHeading
+          eyebrow="Time Judice"
+          title="Quem está à frente"
+          description="Especialistas que conectam conhecimento do Judiciário, tecnologia e gestão de pessoas para sustentar a evolução da Judice."
+          tone="dark"
+        />
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-12">
+          {MEMBERS.map((member) => (
+            <div
+              key={member.name}
+              className="space-y-5 rounded-2xl border border-white/10 bg-white/5 p-5 sm:p-6"
+            >
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-white/10">
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="space-y-3">
+                <div>
+                  <p className="text-sm text-judice-blue-light">{member.role}</p>
+                  <p className="text-xl font-bold tracking-tight text-white">
+                    {member.name}
+                  </p>
+                </div>
+                <p className="text-sm leading-relaxed text-white/70">
+                  {member.bio}
                 </p>
-              </div>
-              <p className="text-sm leading-relaxed text-zinc-600">
-                {member.bio}
-              </p>
-              <div className="flex items-center gap-2 pt-1">
-                {member.linkedin && (
-                  <a
-                    href={member.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`LinkedIn de ${member.name}`}
-                    className="flex h-9 w-9 items-center justify-center rounded-full bg-judice-navy/5 text-judice-navy transition-colors hover:bg-judice-navy hover:text-white"
-                  >
-                    <LinkedinIcon className="h-4.5 w-4.5" />
-                  </a>
-                )}
-                {member.email && (
-                  <a
-                    href={`mailto:${member.email}`}
-                    aria-label={`Enviar e-mail para ${member.name}`}
-                    className="flex h-9 w-9 items-center justify-center rounded-full bg-judice-navy/5 text-judice-navy transition-colors hover:bg-judice-navy hover:text-white"
-                  >
-                    <EmailIcon className="h-4.5 w-4.5" />
-                  </a>
-                )}
+                <div className="flex items-center gap-2 pt-1">
+                  {member.linkedin && (
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`LinkedIn de ${member.name}`}
+                      className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white hover:text-judice-navy"
+                    >
+                      <LinkedinIcon className="h-4.5 w-4.5" />
+                    </a>
+                  )}
+                  {member.email && (
+                    <a
+                      href={`mailto:${member.email}`}
+                      aria-label={`Enviar e-mail para ${member.name}`}
+                      className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white hover:text-judice-navy"
+                    >
+                      <EmailIcon className="h-4.5 w-4.5" />
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
