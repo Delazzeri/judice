@@ -17,6 +17,7 @@ const MEMBERS: Member[] = [
     bio: "Formado em Ciências Contábeis, iniciou sua trajetória no Judiciário gaúcho, onde conheceu de perto os desafios do universo jurídico. Em 2003, fundou a Judice para transformar a forma como escritórios realizam diligências fora de suas localidades, hoje uma empresa com atuação em todo o Brasil.",
     image: "/images/team/rodrigo.png",
     email: "rodrigo@judice.com.br",
+    linkedin: "https://www.linkedin.com/in/rodrigo-wichmann/",
   },
   {
     name: "Fábio Joel",
@@ -45,79 +46,70 @@ function LinkedinIcon({ className = "" }: { className?: string }) {
 
 export default function TeamMembers() {
   return (
-    <section className="relative overflow-hidden bg-judice-navy py-16 sm:py-24">
-      <div
-        aria-hidden
-        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.08),_transparent_60%)]"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-24 -left-32 hidden h-[520px] w-[520px] opacity-[0.04] md:block"
-      >
-        <Image
-          src="/images/logos/logo_simbolo_nova.png"
-          alt=""
-          fill
-          className="object-contain"
+    <section className="px-4 py-12 sm:px-8 sm:py-16">
+      <div className="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-judice-navy px-6 py-16 sm:px-12 sm:py-20">
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.08),_transparent_60%)]"
         />
-      </div>
 
-      <div className="relative mx-auto max-w-7xl space-y-12 px-4 sm:px-8">
-        <SectionHeading
-          eyebrow="Time Judice"
-          title="Quem está à frente"
-          description="Especialistas que conectam conhecimento do Judiciário, tecnologia e gestão de pessoas para sustentar a evolução da Judice."
-          tone="dark"
-        />
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-12">
-          {MEMBERS.map((member) => (
-            <div
-              key={member.name}
-              className="space-y-5 rounded-2xl border border-white/10 bg-white/5 p-5 sm:p-6"
-            >
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-white/10">
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="space-y-3">
-                <div>
-                  <p className="text-sm text-judice-blue-light">{member.role}</p>
-                  <p className="text-xl font-bold tracking-tight text-white">
-                    {member.name}
+        <div className="relative space-y-12">
+          <SectionHeading
+            eyebrow="Time Judice"
+            title="Quem está à frente"
+            description="Especialistas que conectam conhecimento do Judiciário, tecnologia e gestão de pessoas para sustentar a evolução da Judice."
+            tone="dark"
+          />
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-12">
+            {MEMBERS.map((member) => (
+              <div
+                key={member.name}
+                className="space-y-5 rounded-2xl border border-white/10 bg-white/5 p-5 sm:p-6"
+              >
+                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-white/10">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="space-y-3">
+                  <div>
+                    <p className="text-sm text-judice-blue-light">{member.role}</p>
+                    <p className="text-xl font-bold tracking-tight text-white">
+                      {member.name}
+                    </p>
+                  </div>
+                  <p className="text-sm leading-relaxed text-white/70">
+                    {member.bio}
                   </p>
-                </div>
-                <p className="text-sm leading-relaxed text-white/70">
-                  {member.bio}
-                </p>
-                <div className="flex items-center gap-2 pt-1">
-                  {member.linkedin && (
-                    <a
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`LinkedIn de ${member.name}`}
-                      className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white hover:text-judice-navy"
-                    >
-                      <LinkedinIcon className="h-4.5 w-4.5" />
-                    </a>
-                  )}
-                  {member.email && (
-                    <a
-                      href={`mailto:${member.email}`}
-                      aria-label={`Enviar e-mail para ${member.name}`}
-                      className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white hover:text-judice-navy"
-                    >
-                      <EmailIcon className="h-4.5 w-4.5" />
-                    </a>
-                  )}
+                  <div className="flex items-center gap-2 pt-1">
+                    {member.linkedin && (
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`LinkedIn de ${member.name}`}
+                        className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white hover:text-judice-navy"
+                      >
+                        <LinkedinIcon className="h-4.5 w-4.5" />
+                      </a>
+                    )}
+                    {member.email && (
+                      <a
+                        href={`mailto:${member.email}`}
+                        aria-label={`Enviar e-mail para ${member.name}`}
+                        className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white hover:text-judice-navy"
+                      >
+                        <EmailIcon className="h-4.5 w-4.5" />
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
