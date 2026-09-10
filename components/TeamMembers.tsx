@@ -25,6 +25,7 @@ const MEMBERS: Member[] = [
     bio: "Administrador de Empresas, com pós-graduação em Desenvolvimento Humano nas Organizações e em Marketing Digital. Na Judice desde 2006, liderou a expansão para Santa Catarina, a reestruturação da unidade de São Paulo e a implantação do serviço de audiências.",
     image: "/images/team/fabio.png",
     email: "fabiojoel@judice.com.br",
+    linkedin: "https://www.linkedin.com/in/f%C3%A1bio-bueno-farias-b1975287",
   },
 ];
 
@@ -46,21 +47,20 @@ function LinkedinIcon({ className = "" }: { className?: string }) {
 
 export default function TeamMembers() {
   return (
-    <section className="px-4 py-12 sm:px-8 sm:py-16">
-      <div className="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-judice-navy px-6 py-16 sm:px-12 sm:py-20">
-        <div
-          aria-hidden
-          className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.08),_transparent_60%)]"
-        />
+    <section className="relative overflow-hidden bg-judice-navy py-16 sm:py-24">
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.08),_transparent_60%)]"
+      />
 
-        <div className="relative space-y-12">
-          <SectionHeading
-            eyebrow="Time Judice"
-            title="Quem está à frente"
-            description="Especialistas que conectam conhecimento do Judiciário, tecnologia e gestão de pessoas para sustentar a evolução da Judice."
-            tone="dark"
-          />
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-12">
+      <div className="relative mx-auto max-w-7xl space-y-12 px-4 sm:px-8">
+        <SectionHeading
+          eyebrow="Time Judice"
+          title="Quem está à frente"
+          description="Especialistas que conectam conhecimento do Judiciário, tecnologia e gestão de pessoas para sustentar a evolução da Judice."
+          tone="dark"
+        />
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-12">
             {MEMBERS.map((member) => (
               <div
                 key={member.name}
@@ -109,7 +109,6 @@ export default function TeamMembers() {
                 </div>
               </div>
             ))}
-          </div>
         </div>
       </div>
     </section>
