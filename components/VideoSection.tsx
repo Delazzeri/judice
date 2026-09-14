@@ -24,7 +24,7 @@ export default function VideoSection({
         </div>
         <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-zinc-100">
           <iframe
-            src={`https://www.youtube-nocookie.com/embed/${youtubeId}`}
+            src={`https://www.youtube-nocookie.com/embed/${youtubeId}?modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&color=white`}
             title="Vídeo institucional Judice"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

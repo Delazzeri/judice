@@ -22,9 +22,8 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
 
-        {/* TODO: trocar pelo ID definitivo do vídeo institucional assim que o cliente enviar o link do YouTube */}
         <VideoSection
-          youtubeId="dQw4w9WgXcQ"
+          youtubeId="TbT1ANQuQn0"
           title="Você cuida do jurídico. A Judice cuida da operação local."
           description={
             <>
