@@ -25,11 +25,6 @@ export default function Home() {
         {/* TODO: trocar pelo ID definitivo do vídeo institucional assim que o cliente enviar o link do YouTube */}
         <VideoSection
           youtubeId="dQw4w9WgXcQ"
-          title="Conheça a operação da Judice"
-          description="Veja como coordenamos uma rede nacional de advogados e prepostos para atender seu escritório em qualquer comarca do Brasil."
-        />
-
-        <IntroStatement
           title="Você cuida do jurídico. A Judice cuida da operação local."
           description={
             <>
