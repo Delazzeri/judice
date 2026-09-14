@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { SOLUTIONS } from "@/lib/solutions";
+import { COMPANY } from "@/lib/company";
 import SolutionIcon from "./SolutionIcon";
 import { useAccessibility } from "./AccessibilityProvider";
 
@@ -11,10 +12,10 @@ const NAV_LINKS_AFTER = [
   { label: "Seja Correspondente", href: "https://www.judiceonline.com.br/judice/judiceSite/correspondente.jsp" },
 ];
 
-const LOGIN_URL = "https://www.judiceonline.com.br/judice/judiceSite/login.jsp";
-const CONTACT_EMAIL = "judice@judice.com.br";
-const CONTACT_WHATSAPP_DISPLAY = "51 98345-8538";
-const CONTACT_WHATSAPP_HREF = "https://wa.me/5551983458538";
+const LOGIN_URL = COMPANY.loginUrl;
+const CONTACT_EMAIL = COMPANY.email;
+const CONTACT_WHATSAPP_DISPLAY = COMPANY.whatsappDisplay;
+const CONTACT_WHATSAPP_HREF = COMPANY.whatsappHref;
 
 function EmailIcon({ className = "" }: { className?: string }) {
   return (

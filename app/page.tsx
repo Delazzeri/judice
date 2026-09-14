@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import VideoSection from "@/components/VideoSection";
 import IntroStatement from "@/components/IntroStatement";
 import SolutionsShowcase from "@/components/SolutionsShowcase";
 import NumberedTimeline from "@/components/NumberedTimeline";
@@ -20,6 +21,13 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
+
+        {/* TODO: trocar pelo ID definitivo do vídeo institucional assim que o cliente enviar o link do YouTube */}
+        <VideoSection
+          youtubeId="dQw4w9WgXcQ"
+          title="Conheça a operação da Judice"
+          description="Veja como coordenamos uma rede nacional de advogados e prepostos para atender seu escritório em qualquer comarca do Brasil."
+        />
 
         <IntroStatement
           title="Você cuida do jurídico. A Judice cuida da operação local."

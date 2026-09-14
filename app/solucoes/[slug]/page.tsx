@@ -8,6 +8,8 @@ import StatBanner from "@/components/StatBanner";
 import CaseStudy from "@/components/CaseStudy";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
+import { SITE_URL } from "@/lib/company";
 import { SOLUTIONS, getSolutionBySlug } from "@/lib/solutions";
 
 type Params = { slug: string };
@@ -29,6 +31,15 @@ export async function generateMetadata({
   return {
     title: `${solution.title}, Judice`,
     description: solution.description,
+    alternates: {
+      canonical: `/solucoes/${solution.slug}`,
+    },
+    openGraph: {
+      title: `${solution.title}, Judice`,
+      description: solution.description,
+      url: `${SITE_URL}/solucoes/${solution.slug}`,
+      images: [{ url: solution.image, width: 1200, height: 630 }],
+    },
   };
 }
 
@@ -42,8 +53,19 @@ export default async function SolutionPage({
 
   if (!solution) notFound();
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: solution.faq.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
+  };
+
   return (
     <div className="flex flex-1 flex-col">
+      <JsonLd data={faqJsonLd} />
       <Header />
       <main className="flex-1">
         <PageHero

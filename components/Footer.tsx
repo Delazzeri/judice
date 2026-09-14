@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { COMPANY } from "@/lib/company";
 
 const FOOTER_COLUMNS = [
   {
@@ -23,14 +24,14 @@ const FOOTER_COLUMNS = [
   },
   {
     title: "Suporte",
-    links: [{ label: "Contato", href: "mailto:judice@judice.com.br" }],
+    links: [{ label: "Contato", href: `mailto:${COMPANY.email}` }],
   },
 ];
 
 const SOCIAL_LINKS = [
   {
     label: "Facebook",
-    href: "https://web.facebook.com/profile.php?id=61590731609237",
+    href: COMPANY.sameAs[0],
     icon: (
       <svg viewBox="0 0 24 24" className="h-4.5 w-4.5" fill="currentColor">
         <path d="M13.5 21v-7.5h2.5l.5-3h-3V8.5c0-.87.24-1.5 1.53-1.5H16.5V4.35C16.24 4.32 15.36 4.25 14.33 4.25c-2.15 0-3.63 1.31-3.63 3.72V10.5H8v3h2.7V21h2.8z" />
@@ -39,7 +40,7 @@ const SOCIAL_LINKS = [
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/judice-solu%C3%A7%C3%B5es-eletr%C3%B4nicas-b3671842/",
+    href: COMPANY.sameAs[1],
     icon: (
       <svg viewBox="0 0 24 24" className="h-4.5 w-4.5" fill="currentColor">
         <path d="M6.94 8.5H3.56V20h3.38V8.5zM5.25 3.5a1.96 1.96 0 100 3.92 1.96 1.96 0 000-3.92zM20.5 20h-3.37v-5.9c0-1.41-.03-3.22-1.96-3.22-1.97 0-2.27 1.54-2.27 3.12V20H9.53V8.5h3.24v1.57h.05c.45-.86 1.56-1.76 3.21-1.76 3.43 0 4.47 2.26 4.47 5.2V20z" />

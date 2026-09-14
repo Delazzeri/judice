@@ -8,17 +8,41 @@ import StatBanner from "@/components/StatBanner";
 import ServiceList from "@/components/ServiceList";
 import BrazilMap from "@/components/BrazilMap";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
+import { COMPANY, SITE_URL } from "@/lib/company";
 import { SOLUTIONS } from "@/lib/solutions";
+
+const PAGE_DESCRIPTION =
+  "Conheça a história da Judice: mais de 20 anos simplificando a correspondência jurídica em todo o Brasil.";
 
 export const metadata: Metadata = {
   title: "Sobre Nós, Judice",
-  description:
-    "Conheça a história da Judice: mais de 20 anos simplificando a correspondência jurídica em todo o Brasil.",
+  description: PAGE_DESCRIPTION,
+  alternates: {
+    canonical: "/sobre",
+  },
+  openGraph: {
+    title: "Sobre Nós, Judice",
+    description: PAGE_DESCRIPTION,
+    url: `${SITE_URL}/sobre`,
+    images: [{ url: "/images/hero.jpg", width: 1200, height: 630 }],
+  },
+};
+
+const founderJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: COMPANY.founder,
+  jobTitle: "Fundador da Judice",
+  worksFor: { "@type": "Organization", name: COMPANY.legalName, url: SITE_URL },
+  email: "rodrigo@judice.com.br",
+  sameAs: ["https://www.linkedin.com/in/rodrigo-wichmann/"],
 };
 
 export default function Sobre() {
   return (
     <div className="flex flex-1 flex-col">
+      <JsonLd data={founderJsonLd} />
       <Header />
       <main className="flex-1">
         <PageHero
