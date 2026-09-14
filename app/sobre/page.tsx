@@ -7,10 +7,12 @@ import TeamMembers from "@/components/TeamMembers";
 import StatBanner from "@/components/StatBanner";
 import ServiceList from "@/components/ServiceList";
 import BrazilMap from "@/components/BrazilMap";
+import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import { COMPANY, SITE_URL } from "@/lib/company";
 import { SOLUTIONS } from "@/lib/solutions";
+import { INSTITUTIONAL_FAQ } from "@/lib/faq";
 
 const PAGE_DESCRIPTION =
   "Conheça a história da Judice: mais de 20 anos simplificando a correspondência jurídica em todo o Brasil.";
@@ -39,10 +41,21 @@ const founderJsonLd = {
   sameAs: ["https://www.linkedin.com/in/rodrigo-wichmann/"],
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: INSTITUTIONAL_FAQ.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+
 export default function Sobre() {
   return (
     <div className="flex flex-1 flex-col">
       <JsonLd data={founderJsonLd} />
+      <JsonLd data={faqJsonLd} />
       <Header />
       <main className="flex-1">
         <PageHero
@@ -200,6 +213,12 @@ export default function Sobre() {
             </p>
           </div>
         </section>
+
+        <Faq
+          items={INSTITUTIONAL_FAQ}
+          eyebrow="Tire suas dúvidas"
+          title="Perguntas sobre a Judice e a correspondência jurídica"
+        />
       </main>
       <Footer />
     </div>

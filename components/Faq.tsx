@@ -4,13 +4,19 @@ type FaqItem = { question: string; answer: string };
 
 type FaqProps = {
   items: FaqItem[];
+  eyebrow?: string;
+  title?: string;
 };
 
-export default function Faq({ items }: FaqProps) {
+export default function Faq({
+  items,
+  eyebrow = "Dúvidas frequentes",
+  title = "Perguntas e respostas",
+}: FaqProps) {
   return (
     <section className="mx-auto max-w-7xl px-4 py-12 sm:px-8 sm:py-16">
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-16">
-        <SectionHeading eyebrow="Dúvidas frequentes" title="Perguntas e respostas" />
+        <SectionHeading eyebrow={eyebrow} title={title} />
         <div className="divide-y divide-zinc-200 border-t border-zinc-200">
           {items.map((item) => (
             <details key={item.question} className="group py-4">
