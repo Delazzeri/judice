@@ -12,9 +12,14 @@ const member = getTeamMemberBySlug("fabio");
 export const metadata: Metadata = {
   title: "Fábio Joel, Diretor de Operações da Judice",
   description: member?.bio,
-  robots: {
-    index: false,
-    follow: false,
+  alternates: {
+    canonical: "/sobre/fabio",
+  },
+  openGraph: {
+    title: "Fábio Joel, Diretor de Operações da Judice",
+    description: member?.bio,
+    url: `${SITE_URL}/sobre/fabio`,
+    images: member ? [{ url: member.image, width: 1200, height: 1500 }] : undefined,
   },
 };
 

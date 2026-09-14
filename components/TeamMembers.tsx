@@ -1,33 +1,6 @@
 import Image from "next/image";
 import SectionHeading from "./SectionHeading";
-
-type Member = {
-  name: string;
-  role: string;
-  bio: string;
-  image: string;
-  email?: string;
-  linkedin?: string;
-};
-
-const MEMBERS: Member[] = [
-  {
-    name: "Rodrigo Wichmann Cruz",
-    role: "Fundador da Judice",
-    bio: "Formado em Ciências Contábeis, iniciou sua trajetória no Judiciário gaúcho, onde conheceu de perto os desafios do universo jurídico. Em 2003, fundou a Judice para transformar a forma como escritórios realizam diligências fora de suas localidades, hoje uma empresa com atuação em todo o Brasil.",
-    image: "/images/team/rodrigo.png",
-    email: "rodrigo@judice.com.br",
-    linkedin: "https://www.linkedin.com/in/rodrigo-wichmann/",
-  },
-  {
-    name: "Fábio Joel",
-    role: "Diretor de Operações",
-    bio: "Administrador de Empresas, com pós-graduação em Desenvolvimento Humano nas Organizações e em Marketing Digital. Na Judice desde 2006, liderou a expansão para Santa Catarina, a reestruturação da unidade de São Paulo e a implantação do serviço de audiências.",
-    image: "/images/team/fabio.png",
-    email: "fabiojoel@judice.com.br",
-    linkedin: "https://www.linkedin.com/in/f%C3%A1bio-bueno-farias-b1975287",
-  },
-];
+import { TEAM } from "@/lib/team";
 
 function EmailIcon({ className = "" }: { className?: string }) {
   return (
@@ -61,30 +34,36 @@ export default function TeamMembers() {
           tone="dark"
         />
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-12">
-            {MEMBERS.map((member) => (
+            {TEAM.map((member) => (
               <div
-                key={member.name}
+                key={member.slug}
                 className="space-y-5 rounded-2xl border border-white/10 bg-white/5 p-5 sm:p-6"
               >
-                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-white/10">
+                <a href={`/sobre/${member.slug}`} className="relative block aspect-[4/5] w-full overflow-hidden rounded-xl bg-white/10">
                   <Image
                     src={member.image}
                     alt={member.name}
                     fill
                     className="object-cover"
                   />
-                </div>
+                </a>
                 <div className="space-y-3">
                   <div>
                     <p className="text-sm text-judice-blue-light">{member.role}</p>
-                    <p className="text-xl font-bold tracking-tight text-white">
+                    <a href={`/sobre/${member.slug}`} className="block text-xl font-bold tracking-tight text-white transition-colors hover:text-judice-blue-light">
                       {member.name}
-                    </p>
+                    </a>
                   </div>
                   <p className="text-sm leading-relaxed text-white/70">
                     {member.bio}
                   </p>
                   <div className="flex flex-col gap-2 pt-2 sm:flex-row sm:flex-wrap">
+                    <a
+                      href={`/sobre/${member.slug}`}
+                      className="flex items-center justify-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-judice-navy transition-colors hover:bg-white/90"
+                    >
+                      Ver perfil completo
+                    </a>
                     {member.linkedin && (
                       <a
                         href={member.linkedin}

@@ -12,9 +12,14 @@ const member = getTeamMemberBySlug("rodrigo");
 export const metadata: Metadata = {
   title: "Rodrigo Wichmann Cruz, Fundador da Judice",
   description: member?.bio,
-  robots: {
-    index: false,
-    follow: false,
+  alternates: {
+    canonical: "/sobre/rodrigo",
+  },
+  openGraph: {
+    title: "Rodrigo Wichmann Cruz, Fundador da Judice",
+    description: member?.bio,
+    url: `${SITE_URL}/sobre/rodrigo`,
+    images: member ? [{ url: member.image, width: 1200, height: 1500 }] : undefined,
   },
 };
 

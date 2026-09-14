@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/company";
 import { SOLUTIONS } from "@/lib/solutions";
+import { TEAM } from "@/lib/team";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
@@ -27,5 +28,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...solutionRoutes];
+  const teamRoutes: MetadataRoute.Sitemap = TEAM.map((member) => ({
+    url: `${SITE_URL}/sobre/${member.slug}`,
+    changeFrequency: "yearly",
+    priority: 0.5,
+  }));
+
+  return [...staticRoutes, ...solutionRoutes, ...teamRoutes];
 }
