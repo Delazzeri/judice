@@ -51,8 +51,14 @@ const organizationJsonLd = {
   name: COMPANY.legalName,
   url: SITE_URL,
   email: COMPANY.email,
+  telephone: COMPANY.whatsapp,
+  taxID: COMPANY.cnpj,
   foundingDate: COMPANY.foundingDate,
   founder: { "@type": "Person", name: COMPANY.founder },
+  address: {
+    "@type": "PostalAddress",
+    ...COMPANY.address,
+  },
   sameAs: COMPANY.sameAs,
   description:
     "Empresa de correspondência jurídica e logística jurídica com atuação em todo o Brasil.",
