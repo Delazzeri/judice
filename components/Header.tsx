@@ -188,7 +188,7 @@ export default function Header() {
 
           <div className="group relative">
             <a
-              href="/solucoes"
+              href="/#solucoes"
               className="flex items-center gap-1 text-sm font-medium text-zinc-700 transition-colors hover:text-zinc-900"
             >
               Soluções
