@@ -16,11 +16,21 @@ const LOGIN_URL = COMPANY.loginUrl;
 const CONTACT_EMAIL = COMPANY.email;
 const CONTACT_WHATSAPP_DISPLAY = COMPANY.whatsappDisplay;
 const CONTACT_WHATSAPP_HREF = COMPANY.whatsappHref;
+const CONTACT_PHONE_DISPLAY = COMPANY.phoneDisplay;
+const CONTACT_PHONE_HREF = COMPANY.phoneHref;
 
 function EmailIcon({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth={1.75}>
       <path strokeLinecap="round" strokeLinejoin="round" d="M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1zM3.5 6l8.5 6.5L20.5 6" />
+    </svg>
+  );
+}
+
+function PhoneIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth={1.75}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 6a2 2 0 012-2h2.5l1.5 4-1.75 1.25a11 11 0 005 5L14.5 12l4 1.5V18a2 2 0 01-2 2h-1C9.716 20 4 14.284 4 7V6z" />
     </svg>
   );
 }
@@ -255,6 +265,18 @@ export default function Header() {
                       <p className="text-xs text-zinc-500">{CONTACT_WHATSAPP_DISPLAY}</p>
                     </span>
                   </a>
+                  <a
+                    href={CONTACT_PHONE_HREF}
+                    className="flex items-center gap-3 rounded-md px-3 py-2.5 transition-colors hover:bg-zinc-50"
+                  >
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-judice-navy/5 text-judice-navy">
+                      <PhoneIcon className="h-4.5 w-4.5" />
+                    </span>
+                    <span>
+                      <p className="text-sm font-semibold text-zinc-900">Telefone</p>
+                      <p className="text-xs text-zinc-500">{CONTACT_PHONE_DISPLAY}</p>
+                    </span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -367,6 +389,13 @@ export default function Header() {
               >
                 <WhatsappIcon className="h-4 w-4 shrink-0 text-judice-navy" />
                 {CONTACT_WHATSAPP_DISPLAY}
+              </a>
+              <a
+                href={CONTACT_PHONE_HREF}
+                className="flex items-center gap-2 rounded-md px-3 py-2 text-sm text-zinc-600 transition-colors hover:bg-zinc-50 hover:text-zinc-900"
+              >
+                <PhoneIcon className="h-4 w-4 shrink-0 text-judice-navy" />
+                {CONTACT_PHONE_DISPLAY}
               </a>
             </div>
           )}

@@ -27,7 +27,7 @@ export const TEAM: TeamMember[] = [
   },
   {
     slug: "fabio",
-    name: "Fábio Joel",
+    name: "Fábio Joel Bueno Farias",
     role: "Diretor de Operações",
     image: "/images/team/fabio.png",
     email: "fabiojoel@judice.com.br",

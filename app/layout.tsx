@@ -51,7 +51,7 @@ const organizationJsonLd = {
   name: COMPANY.legalName,
   url: SITE_URL,
   email: COMPANY.email,
-  telephone: COMPANY.whatsapp,
+  telephone: COMPANY.phone,
   taxID: COMPANY.cnpj,
   foundingDate: COMPANY.foundingDate,
   founder: { "@type": "Person", name: COMPANY.founder },

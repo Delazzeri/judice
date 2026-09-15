@@ -222,6 +222,10 @@ export const SOLUTIONS: Solution[] = [
         body: "Atendemos os requisitos dos 46 sistemas eletrônicos vigentes no Brasil, sem que você precise de OAB em cada estado.",
       },
       {
+        title: "Integração com qualquer sistema jurídico",
+        body: "A Judice tem a possibilidade de integração com qualquer sistema jurídico utilizado pelo seu escritório, conectando processos, solicitações e retorno de informações diretamente ao ambiente que sua equipe já usa.",
+      },
+      {
         title: "Praticidade",
         body: "Protocole pelo mesmo sistema que você já usa para outras solicitações, sem precisar aprender uma ferramenta nova.",
       },
@@ -266,6 +270,11 @@ export const SOLUTIONS: Solution[] = [
         question: "Como acompanho os andamentos do processo?",
         answer:
           "As atualizações de andamentos e prazos ficam disponíveis no sistema, no mesmo ambiente usado para as demais solicitações.",
+      },
+      {
+        question: "A Judice integra com o sistema jurídico que meu escritório já usa?",
+        answer:
+          "Sim. A Judice tem a possibilidade de integração com qualquer sistema jurídico utilizado pelo escritório, permitindo que solicitações e retornos de diligências fluam diretamente para o ambiente que sua equipe já utiliza no dia a dia.",
       },
     ],
   },

@@ -9,6 +9,9 @@ export const COMPANY = {
   whatsapp: "+5551983458538",
   whatsappDisplay: "51 98345-8538",
   whatsappHref: "https://wa.me/5551983458538",
+  phone: "+555132116505",
+  phoneDisplay: "(51) 3211-6505",
+  phoneHref: "tel:+555132116505",
   loginUrl: "https://www.judiceonline.com.br/judice/judiceSite/login.jsp",
   cnpj: "06.066.194/0001-04",
   // Usado apenas em dados estruturados (JSON-LD), não exibido no site.
