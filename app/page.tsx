@@ -44,7 +44,7 @@ export default function Home() {
               auxiliar você
             </>
           }
-          description="Uma operação nacional de profissionais qualificados para executar audiências, diligências e serviços jurídicos locais com segurança, agilidade e controle."
+          description="Uma operação nacional de profissionais qualificados para executar audiências, diligências e serviços jurídicos locais com segurança, agilidade e controle, com a possibilidade de integração com qualquer sistema jurídico utilizado pelo seu escritório."
           ctaLabel="Conheça nossas soluções"
           ctaHref="#solucoes"
           items={SOLUTIONS.map((solution) => ({
