@@ -44,7 +44,7 @@ export const SOLUTIONS: Solution[] = [
       },
       {
         title: "Confirmação do correspondente",
-        body: "Um correspondente da nossa rede confirma disponibilidade e recebe os arquivos do processo.",
+        body: "Um correspondente da nossa rede confirma disponibilidade e recebe as orientações e documentos que vão ser utilizadas na sua atuação na audiência.",
       },
       {
         title: "Realização da audiência",
@@ -57,7 +57,7 @@ export const SOLUTIONS: Solution[] = [
     ],
     caseStudy: {
       title: "Audiência de última hora em outra comarca",
-      body: "Um escritório de médio porte precisou de um correspondente para uma audiência marcada em outro estado, com menos de 48 horas de antecedência. Pelo sistema, a solicitação foi feita em poucos minutos, um correspondente foi confirmado no mesmo dia, e o relatório da audiência chegou ao cliente horas após a sessão, sem que ninguém do escritório precisasse viajar.",
+      body: "Um escritório de médio porte precisou de um correspondente para uma audiência marcada em outro estado, com menos de 24 horas de antecedência. Pelo sistema, a solicitação foi feita em poucos minutos, um correspondente foi confirmado no mesmo dia, e o relatório da audiência chegou ao cliente horas após a sessão, sem que ninguém do escritório precisasse viajar.",
     },
     faq: [
       {
