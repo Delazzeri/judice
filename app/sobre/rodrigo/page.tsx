@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import PersonProfile from "@/components/PersonProfile";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { SITE_URL, COMPANY } from "@/lib/company";
+import { COMPANY, OG_IMAGE, SITE_URL } from "@/lib/company";
 import { getTeamMemberBySlug } from "@/lib/team";
 import { notFound } from "next/navigation";
 
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: "Rodrigo Wichmann Cruz, Fundador da Judice",
     description: member?.bio,
     url: `${SITE_URL}/sobre/rodrigo`,
-    images: member ? [{ url: member.image, width: 1200, height: 1500 }] : undefined,
+    images: [OG_IMAGE],
   },
 };
 

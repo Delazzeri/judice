@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import { ArrowIcon, EmailIcon, PhoneIcon, WhatsappIcon } from "@/components/ContactIcons";
-import { COMPANY, SITE_URL } from "@/lib/company";
+import { COMPANY, OG_IMAGE, SITE_URL } from "@/lib/company";
 
 const PAGE_DESCRIPTION =
   "Fale com a Judice pelo WhatsApp, e-mail ou telefone. Nossa equipe está pronta para atender sua demanda de correspondência jurídica em todo o Brasil.";
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: "Contato, Judice",
     description: PAGE_DESCRIPTION,
     url: `${SITE_URL}/contato`,
-    images: [{ url: "/images/hero.jpg", width: 1200, height: 630 }],
+    images: [OG_IMAGE],
   },
 };
 

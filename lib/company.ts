@@ -1,5 +1,8 @@
 export const SITE_URL = "https://judice.com.br";
 
+// Imagem exibida ao compartilhar qualquer link do site (WhatsApp, LinkedIn etc.).
+export const OG_IMAGE = { url: "/images/og-image.png", width: 1200, height: 630, alt: "Judice" };
+
 export const COMPANY = {
   legalName: "Judice",
   foundingYear: 2003,

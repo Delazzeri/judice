@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import WhatsappButton from "@/components/WhatsappButton";
 import { AccessibilityProvider } from "@/components/AccessibilityProvider";
 import JsonLd from "@/components/JsonLd";
-import { COMPANY, SITE_URL } from "@/lib/company";
+import { COMPANY, OG_IMAGE, SITE_URL } from "@/lib/company";
 import "./globals.css";
 
 const inter = Inter({
@@ -31,13 +31,13 @@ export const metadata: Metadata = {
     title: "Judice, Correspondência Jurídica",
     description: SITE_DESCRIPTION,
     url: SITE_URL,
-    images: [{ url: "/images/hero.jpg", width: 1200, height: 630 }],
+    images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title: "Judice, Correspondência Jurídica",
     description: SITE_DESCRIPTION,
-    images: ["/images/hero.jpg"],
+    images: [OG_IMAGE.url],
   },
   robots: {
     index: true,

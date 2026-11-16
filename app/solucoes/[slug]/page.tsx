@@ -9,7 +9,7 @@ import CaseStudy from "@/components/CaseStudy";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { SITE_URL } from "@/lib/company";
+import { OG_IMAGE, SITE_URL } from "@/lib/company";
 import { SOLUTIONS, getSolutionBySlug } from "@/lib/solutions";
 
 type Params = { slug: string };
@@ -38,7 +38,7 @@ export async function generateMetadata({
       title: `${solution.title}, Judice`,
       description: solution.description,
       url: `${SITE_URL}/solucoes/${solution.slug}`,
-      images: [{ url: solution.image, width: 1200, height: 630 }],
+      images: [OG_IMAGE],
     },
   };
 }

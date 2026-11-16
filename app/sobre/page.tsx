@@ -10,7 +10,7 @@ import BrazilMap from "@/components/BrazilMap";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { COMPANY, SITE_URL } from "@/lib/company";
+import { COMPANY, OG_IMAGE, SITE_URL } from "@/lib/company";
 import { SOLUTIONS } from "@/lib/solutions";
 import { INSTITUTIONAL_FAQ } from "@/lib/faq";
 
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "Sobre Nós, Judice",
     description: PAGE_DESCRIPTION,
     url: `${SITE_URL}/sobre`,
-    images: [{ url: "/images/hero.jpg", width: 1200, height: 630 }],
+    images: [OG_IMAGE],
   },
 };
 
