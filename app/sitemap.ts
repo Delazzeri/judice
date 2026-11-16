@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ],
     },
     { url: `${SITE_URL}/sobre`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE_URL}/contato`, changeFrequency: "yearly", priority: 0.7 },
   ];
 
   const solutionRoutes: MetadataRoute.Sitemap = SOLUTIONS.map((solution) => ({

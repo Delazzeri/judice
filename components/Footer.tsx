@@ -24,7 +24,7 @@ const FOOTER_COLUMNS = [
   },
   {
     title: "Suporte",
-    links: [{ label: "Contato", href: `mailto:${COMPANY.email}` }],
+    links: [{ label: "Contato", href: "/contato" }],
   },
 ];
 
