@@ -94,6 +94,15 @@ export default function Footer() {
           </div>
         ))}
       </div>
+
+      <div className="mx-auto mt-12 max-w-7xl px-4 sm:mt-16 sm:px-8">
+        <div className="flex flex-col gap-2 border-t border-white/10 pt-8 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
+          <p>
+            © {new Date().getFullYear()} {COMPANY.legalName}. Todos os direitos reservados.
+          </p>
+          <p>CNPJ {COMPANY.cnpj}</p>
+        </div>
+      </div>
     </footer>
   );
 }
